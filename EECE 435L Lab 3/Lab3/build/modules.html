@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lab3 Module Documentation &#8212; Lab3 00.00.01 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lab3 Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="lab3-module-documentation">
+<h1>Lab3 Module Documentation<a class="headerlink" href="#lab3-module-documentation" title="Link to this heading">¶</a></h1>
+<p>This module provides functionalities related to School Registration.</p>
+<dl class="py class" id="module-hello">
+<dt class="sig sig-object py" id="hello.Course">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">Course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instructor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Course" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing a course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>course_id</strong> (<em>str</em>) – The ID of the course.</p></li>
+<li><p><strong>course_name</strong> (<em>str</em>) – The name of the course.</p></li>
+<li><p><strong>instructor</strong> (<a class="reference internal" href="#hello.Instructor" title="hello.Instructor"><em>Instructor</em></a>) – The instructor teaching the course.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>add_student(student): Enroll a student in the course.
+to_dict(): Convert the object to a dictionary.
+from_dict(data): Create a Course object from a dictionary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Course.add_student">
+<span class="sig-name descname"><span class="pre">add_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Course.add_student" title="Link to this definition">¶</a></dt>
+<dd><p>Add a student to the course.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Course.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Course.from_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Course object from a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Course.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.Course.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the course object into a dictionary.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.DataManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">DataManager</span></span><a class="headerlink" href="#hello.DataManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class responsible for managing file I/O operations for students, instructors, and courses.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>save_to_file(data, filename): Saves a list of objects to a CSV file.
+load_from_file(filename, obj_class): Loads data from a CSV file and creates objects of the given class.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.DataManager.load_from_file">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_class</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.DataManager.load_from_file" title="Link to this definition">¶</a></dt>
+<dd><p>Loads data from a CSV file and creates a list of objects of the given class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – The name of the CSV file to load the data from.</p></li>
+<li><p><strong>obj_class</strong> (<em>class</em>) – The class to instantiate objects from the loaded data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of objects created from the data in the file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.DataManager.save_to_file">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.DataManager.save_to_file" title="Link to this definition">¶</a></dt>
+<dd><p>Saves a list of objects to a CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list</em>) – A list of objects to be saved. Each object must have a <cite>to_dict</cite> method.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – The name of the CSV file to save the data in.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.Instructor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">Instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instructor_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Instructor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hello.Person" title="hello.Person"><code class="xref py py-class docutils literal notranslate"><span class="pre">Person</span></code></a></p>
+<p>A class representing an instructor, inheriting from Person.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instructor_id</strong> (<em>str</em>) – The ID of the instructor.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>assign_course(course): Assign a course to the instructor.
+to_dict(): Convert the object to a dictionary.
+from_dict(data): Create an Instructor object from a dictionary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Instructor.assign_course">
+<span class="sig-name descname"><span class="pre">assign_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Instructor.assign_course" title="Link to this definition">¶</a></dt>
+<dd><p>Assign a course to the instructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Instructor.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Instructor.from_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Create an Instructor object from a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Instructor.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.Instructor.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the instructor object into a dictionary.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.Person">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">Person</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Person" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing a generic person.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the person.</p></li>
+<li><p><strong>age</strong> (<em>int</em>) – The age of the person.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The email address of the person.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>introduce(): Print the introduction of the person.
+to_dict(): Convert the object to a dictionary.
+from_dict(data): Create a Person object from a dictionary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Person.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Person.from_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Person object from a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Person.introduce">
+<span class="sig-name descname"><span class="pre">introduce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.Person.introduce" title="Link to this definition">¶</a></dt>
+<dd><p>Introduce the person with their name and age.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Person.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.Person.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the person object into a dictionary.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.Student">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">Student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">student_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Student" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hello.Person" title="hello.Person"><code class="xref py py-class docutils literal notranslate"><span class="pre">Person</span></code></a></p>
+<p>A class representing a student, inheriting from Person.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>student_id</strong> (<em>str</em>) – The ID of the student.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>register_course(course): Add a course to the student’s list of registered courses.
+to_dict(): Convert the object to a dictionary.
+from_dict(data): Create a Student object from a dictionary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Student.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Student.from_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Student object from a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Student.register_course">
+<span class="sig-name descname"><span class="pre">register_course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">course</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Student.register_course" title="Link to this definition">¶</a></dt>
+<dd><p>Register a course for the student.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Student.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.Student.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the student object into a dictionary.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.Validator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">Validator</span></span><a class="headerlink" href="#hello.Validator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A utility class for validating inputs.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>validate_email(email): Validates if an email is in the correct format.
+validate_age(age): Validates if the age is a positive integer.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Validator.validate_age">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Validator.validate_age" title="Link to this definition">¶</a></dt>
+<dd><p>Validate an age value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>age</strong> (<em>int</em>) – The age to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the age is negative.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.Validator.validate_email">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.Validator.validate_email" title="Link to this definition">¶</a></dt>
+<dd><p>Validate an email address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>email</strong> (<em>str</em>) – The email to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the email is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hello.run_gui">
+<span class="sig-prename descclassname"><span class="pre">hello.</span></span><span class="sig-name descname"><span class="pre">run_gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instructor_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.run_gui" title="Link to this definition">¶</a></dt>
+<dd><p>Launches the graphical user interface (GUI) for managing students, instructors, and courses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>student_list</strong> (<em>list</em>) – A list of Student objects.</p></li>
+<li><p><strong>instructor_list</strong> (<em>list</em>) – A list of Instructor objects.</p></li>
+<li><p><strong>course_list</strong> (<em>list</em>) – A list of Course objects.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lab3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lab3 Module Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hello.Course"><code class="docutils literal notranslate"><span class="pre">Course</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.DataManager"><code class="docutils literal notranslate"><span class="pre">DataManager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.Instructor"><code class="docutils literal notranslate"><span class="pre">Instructor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.Person"><code class="docutils literal notranslate"><span class="pre">Person</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.Student"><code class="docutils literal notranslate"><span class="pre">Student</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.Validator"><code class="docutils literal notranslate"><span class="pre">Validator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello.run_gui"><code class="docutils literal notranslate"><span class="pre">run_gui()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Lab3 Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Roni & Bahaa.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
